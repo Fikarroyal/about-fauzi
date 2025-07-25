@@ -1,3 +1,3 @@
 # Fauzi Porto
 
-minggu depan ada perbaikan tampilan responsif!
+minggu depan ada perbaikan tampilan responsif ya
