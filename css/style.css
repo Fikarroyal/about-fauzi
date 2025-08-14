@@ -2130,14 +2130,85 @@ img {
   text-align: center;
 }
 
-/* Responsive tweak for mobile */
+/* ====== GLOBAL SAFE RESET (mobile friendly) ====== */
+html, body { overflow-x: hidden; }
+img, video { max-width: 100%; height: auto; display: block; }
+.container { max-width: 100%; }
+
+/* Buang sisa alignment kiri/kanan di mobile */
 @media (max-width: 768px) {
-  .hero-center h1 {
-    font-size: 2rem; /* Supaya tidak terlalu besar di hp */
+  .text-left, .text-right { text-align: center !important; }
+  .unslate_co--section .container,
+  .unslate_co--section .section-heading-wrap,
+  .unslate_co--section [class*="col-"] { text-align: center; }
+
+  /* ===== NAVBAR ===== */
+  .unslate_co--site-nav .row { justify-content: center !important; }
+  .site-logo.pos-absolute {
+    position: static;        /* dari absolute -> ikut flow */
+    transform: none;
+    margin: 10px auto 0;
+    text-align: center;
+    display: block;
   }
-  .hero-center h2 {
-    font-size: 1rem;
+  .unslate_co--site-nav [class*="col-"] { text-align: center !important; }
+
+  /* ===== HERO ===== */
+  #home-section .row { justify-content: center !important; }
+  #home-section .heading,
+  #home-section .subheading { text-align: center; }
+  .hero-cta { display: flex; flex-direction: column; align-items: center; }
+  .hero-cta .socials { justify-content: center; }
+
+  /* ===== ABOUT ===== */
+  #about-section .row { justify-content: center !important; text-align: center; }
+  #about-section figure,
+  #about-section img { margin-left: auto; margin-right: auto; }
+
+  /* ===== SERVICES ===== */
+  #services-section .row { justify-content: center !important; }
+  .feature-v1 { text-align: center; }
+  .feature-v1 .wrap-icon { margin-left: auto; margin-right: auto; }
+
+  /* ===== SKILLS / COUNTER ===== */
+  #skills-section .row { justify-content: center !important; }
+  #skills-section .counter-v1 { text-align: center; }
+
+  /* ===== PORTFOLIO ===== */
+  .portfolio-wrapper .d-flex { justify-content: center !important; }
+  #posts .item { margin-left: auto; margin-right: auto; }
+  /* antisipasi gutter negatif dari grid custom */
+  .gutter-isotope-item { margin-left: 0 !important; margin-right: 0 !important; }
+
+  /* ===== BLOG / HISTORY ===== */
+  #journal-section .row { justify-content: center !important; }
+  .blog-post-entry { display: flex; justify-content: center; }
+
+  /* ===== CONTACT ===== */
+  #contact-section .row { justify-content: center !important; }
+  #contact-section .contact-info-v1 { text-align: center; }
+  #contact-section form .form-group,
+  #contact-section form .col-lg-6,
+  #contact-section form .col-lg-12 {
+    text-align: center;
+    margin-left: auto; margin-right: auto;
   }
+  #contact-section label { display: inline-block; }  /* label ikut center */
+  /* kalau input ingin tetap full width rapi */
+  #contact-section .form-control { max-width: 520px; width: 100%; margin-left: auto; margin-right: auto; }
+
+  /* ===== FOOTER ===== */
+  .unslate_co--footer { text-align: center; }
+  .unslate_co--footer .footer-site-logo { display: flex; justify-content: center; }
+  .unslate_co--footer .footer-site-social {
+    padding-left: 0; margin: 10px 0; list-style: none;
+    display: flex; gap: 14px; justify-content: center;
+  }
+  .unslate_co--footer .footer-site-social li { display: inline-block; }
 }
+
+/* ===== Tambahan: cegah elemen 100vw bikin geser ===== */
+*[style*="100vw"] { width: 100% !important; } /* jaga-jaga komponen pihak ketiga */
+
 
 
