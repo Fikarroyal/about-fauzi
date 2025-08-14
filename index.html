@@ -437,54 +437,107 @@
         </div>
       </div>
 
-      <div class="unslate_co--section section-counter" id="skills-section">
-        <div class="container">
-          <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">My Skills</span></h2>
-            <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
-          </div>
+      <div class="unslate_co--section section-skills" id="skills-section">
+        <style>
+    /* === Style Skill Cards === */
+    .skill-card {
+      background: #111; /* warna hitam pekat */
+      border-radius: 10px;
+      color: white;
+      text-align: left;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 1.5rem;
+      height: 100%;
+    }
 
+    .skill-card h4 {
+      font-weight: bold;
+      color: #e63946; /* warna merah aksen */
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
 
-          <div class="row pt-5">
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="65">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">Desainer</span>
-              </div>
-            </div>
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="75">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">Fotografer</span>
-              </div>
-            </div>
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="80">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">Operator Stream</span>
-              </div>
-            </div>
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="95">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">Videografer</span>
-              </div>
-            </div>
-          </div>
+    .skill-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skill-card ul li {
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .skill-card ul li:last-child {
+      border-bottom: none;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Mobile: text & padding */
+    @media (max-width: 768px) {
+      .skill-card {
+        text-align: center;
+      }
+    }
+  </style>
+
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">My Skills</span></h2>
+      <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
+    </div>
+
+    <div class="row pt-4 justify-content-center">
+
+      <!-- Hardskill -->
+      <div class="col-md-4 col-sm-12 mb-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="skill-card">
+          <h4>Hardskill</h4>
+          <ul>
+            <li>Editing Video</li>
+            <li>Videografi & Fotografi</li>
+            <li>Streaming Operator</li>
+          </ul>
         </div>
       </div>
+
+      <!-- Softskill -->
+      <div class="col-md-4 col-sm-12 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="skill-card">
+          <h4>Softskill</h4>
+          <ul>
+            <li>Komunikasi dan koordinasi</li>
+            <li>Manajemen tim</li>
+            <li>Manajemen waktu</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="col-md-4 col-sm-12 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="skill-card">
+          <h4>Tools</h4>
+          <ul>
+            <li>Davinci Resolve</li>
+            <li>Adobe Premiere Pro</li>
+            <li>Adobe After Effect</li>
+            <li>Adobe Illustrator</li>
+            <li>OBS</li>
+            <li>VMIX</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
       <!-- END .counter -->
 
 
@@ -638,7 +691,7 @@
               
               <div class="footer-site-logo"><a href="#">Fauzi.<span>SW</span></a></div>
               <p class="site-copyright">
-                Privacy Policy | All rights reserved</a>
+                Privacy Policy | All rights reserved.</a>
               </p>
             </div>
           </div>
