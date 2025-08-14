@@ -2095,3 +2095,28 @@ span.error {
 .gsap-reveal-img .reveal-wrap .reveal-content .portfolio-item-content h3 {
   margin-bottom: 10px;
 }
+
+/* ==== FIX: Hapus scroll horizontal di mobile ==== */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Pastikan semua elemen tidak keluar layar */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Gambar tidak boleh lebih lebar dari layar */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Baris & container aman dari overflow */
+.container, .row {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
