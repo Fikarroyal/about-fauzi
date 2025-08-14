@@ -2120,3 +2120,24 @@ img {
   overflow-x: hidden;
 }
 
+/* Center content vertically & horizontally in hero section */
+.hero-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertikal tengah */
+  align-items: center;     /* Horizontal tengah */
+  min-height: 100vh;       /* Setinggi layar */
+  text-align: center;
+}
+
+/* Responsive tweak for mobile */
+@media (max-width: 768px) {
+  .hero-center h1 {
+    font-size: 2rem; /* Supaya tidak terlalu besar di hp */
+  }
+  .hero-center h2 {
+    font-size: 1rem;
+  }
+}
+
+
