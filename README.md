@@ -1,2 +1,1 @@
 # About Fauzi
-## Coming Soon
